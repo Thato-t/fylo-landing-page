@@ -1,0 +1,523 @@
+:root{
+    --clr-primary-9: hsl(243, 87%, 12%);
+    --clr-primary-2:hsl(238, 22%, 44%);
+
+    --clr-accent-5: hsl(224, 93%, 58%);
+    --clr-accent-1:hsl(0, 0%, 75%);
+
+    --clr-neutal-1: hsl(240, 75%, 98%);
+    --clr-netral-3:hsl(0, 0%, 75%);
+
+    --ff-headings:Raleway;
+    --fw-headings-normal:400;
+    --fw-headings-bold:700;
+
+    --ff-body:'Open Sans';
+    --fw-body-normal:400;
+
+    --fs-pg-normal:1rem;
+}
+::-webkit-scrollbar{
+    width:0.6rem;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--clr-primary-2);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(243, 87%, 92%);
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: var(--ff-body), var(--ff-headings);
+    font-weight:var(--fw-body-normal);
+}
+.container{
+    margin:30px 20px 20px 20px;
+}
+.nav-bar{
+    margin-bottom: 70px;
+    height:fit-content;
+    width:100%;
+}
+.nav-list{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar ul{
+    display: flex;
+    gap:4rem;
+    list-style: none;
+}
+.nav-bar .nav-link{
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-family: var(--ff-headings), sans-serif;
+    color:var(--clr-primary-9);
+    height:100%;
+    font-weight: var(--fw-headings-normal);
+    position:relative;
+    font-weight:var(--fw-headings-bold);
+}
+.nav-bar .nav-link::before{
+    content: '';
+    position:absolute;
+    width:0;
+    background-color: var(--clr-primary-9);
+    height:2px;
+    top:17px;
+    transition: 500ms;
+}
+.nav-bar .nav-link:hover::before{
+    width:100%;
+    color:var(--clr-primary-9);
+}
+.nav-bar .nav-link:hover{
+    color:var(--clr-primary-9);
+}
+.even-col{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:100%;
+}
+.info{
+    padding-block: 110px;
+}
+.info h1{
+    font-family: var(--ff-headings), sans-serif;
+    font-weight: var(--fw-headings-bold);
+    color:var(--clr-primary-9);
+    line-height: 35px;
+    width:28ch;
+}
+p{
+    font-size: 0.85rem;
+}
+.info-first{
+    margin-block:20px;
+    width:55ch;
+    color:var(--clr-primary-9)
+}
+.email-address input{
+    width:250px;
+    height:35px;
+    border: 1px solid var(--clr-primary-9);
+    border-radius:3px;
+    outline: none;
+}
+.email-address input::placeholder{
+    color: var(--clr-accent-1);
+}
+.email-address input:user-valid{
+    border:1px solid var(--clr-primary-2)
+}
+.email-address input:user-invalid{
+    border:1px solid red;
+}
+.email-address input:focus-within{
+    border:1px solid var(--clr-accent-5);
+}
+.email-address button{
+    width:150px;
+    height:35px;
+    border:none;
+    border-radius: 3px;
+    outline:none;
+    background-color: var(--clr-accent-5);
+    color:white;
+    font-weight: var(--fw-headings-bold);
+    margin-left:10px;
+}
+.email-address button:hover{
+    cursor: pointer;
+    background-color: hsl(224, 93%, 70%);
+}
+.illustration-1{
+    width:100%;
+    height:100%;
+}
+.illustration-2{
+    width:100%;
+    height:400px;
+}
+.second-section{
+    margin-top:200px;
+    background-image: url(images/bg-curve-desktop.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+.second-section .details,
+.second-section .illustration-2{
+    margin-top:100px;
+}
+.details h1,
+.details p{
+    color:var(--clr-primary-9)
+}
+.details h1{
+    margin-bottom: 30px;
+}
+.details .info-second{
+    margin-top: 30px;
+}
+.fylo-link{
+    margin-block:20px 50px;
+}
+.fylo-link a{
+    text-decoration: none;
+    color:hsl(182, 75%, 66%);
+}
+.fylo-link a:hover{
+    text-decoration: underline;
+    cursor:pointer;
+    color:hsl(182, 75%, 79%)
+}
+.fylo-link a:active{
+    color:hsl(182, 75%, 89%)
+}
+.fylo-link .icon-arrow{
+    margin-top:-30px;
+    margin-bottom:-3px;
+}
+.comment-box{
+    background-color: white;
+    box-shadow: 0 0 3px black;
+    border-radius:3px;
+    width:350px;
+    padding:20px;
+    margin-bottom:35px;
+}
+.review{
+    margin-top:0px
+}
+.review .icon-quotes{
+    margin-bottom:-10px;
+    width:20px;
+    height: 20px;
+}
+.image{
+    display:flex;
+    align-items: center;
+    margin-top:20px;
+}
+.image img{
+    height:35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-top:0px
+}
+.image span{
+    font-weight: var(--fw-headings-bold);
+}
+
+
+.third-selection{
+    background-color: var(--clr-primary-2);
+    height:250px;
+    margin-top:-28px;
+    color:white;
+}
+.sign-details, .second-form{
+    margin-top:60px;
+}
+.sign-details h2{
+    margin-bottom:20px
+}
+.sign-details p{
+    width:60ch
+}
+.email-starting input{
+    display: block;
+    width:350px;
+    height:40px;
+    border:none;
+    margin-bottom:20px;
+    border-radius:3px;
+    outline:none;
+    box-shadow: 0px 0px 1px black;
+}
+.email-starting input::placeholder{
+    color: var(--clr-accent-1);
+}
+.email-starting input:user-valid{
+    border:1px solid white;
+}
+.email-starting input:user-invalid{
+    border:1px solid red;
+}
+.email-starting input:focus-within{
+    border:1px solid var(--clr-accent-5);
+}
+.email-starting button{
+    width:200px;
+    height:35px;
+    border:none;
+    border-radius: 3px;
+    outline:none;
+    background-color: var(--clr-accent-5);
+    color:white;
+    font-weight: var(--fw-headings-bold);
+}
+.email-starting button:hover{
+    cursor: pointer;
+    background-color: hsl(224, 93%, 70%);
+}
+.footer-bar {
+    background-color: var(--clr-primary-9);
+    color:white;
+    padding:10px;
+    height:fit-content
+}
+.footer-bar .container{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.box1-footer{
+    width:190px;
+}
+.box1-footer .logo{
+    margin-bottom: 10px;
+}
+.box1-footer .icon-phone, 
+.icon-email{
+    float: left;
+    margin-right:10px;
+}
+.box2-footer,
+.box3-footer,
+.box4-footer{
+    margin-top:60px;
+}
+.box2-footer p,
+.box3-footer p{
+    line-height:36px
+}
+.box2-footer span:hover{
+    cursor: pointer;
+    color:var(--clr-primary-2);
+}
+.box3-footer span:hover{
+    cursor: pointer;
+    color:var(--clr-primary-2);
+}
+.my-details a,
+.sm .sm-icon{
+    text-decoration: none;
+    color:white;
+}
+.my-details a:hover{
+    cursor: pointer;
+    color:var(--clr-primary-2);
+}
+.box4-footer{
+    width:fit-content;
+    height: fit-content;
+}
+.box4-footer .sm{
+    display: flex;
+    gap:1.5rem;
+    list-style: none;
+}
+.sm-icon{
+    border:1px solid white;
+    border-radius:50%;
+    padding:5px;
+}
+.sm-icon:hover{
+    cursor: pointer;
+    color:var(--clr-primary-2);
+    border: 1px solid var(--clr-primary-2) ;
+}
+@media (max-width:915px){
+    .container{
+        margin:30px 20px 20px 20px;
+    }
+    .even-col.rw{
+        display: flex;
+        flex-wrap:wrap-reverse;
+    }
+    .even-col.w{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .details .info-second{
+        margin-block:7px;
+        width:calc(100% - 200px);
+    }
+    .info{
+        margin:auto
+    }
+    .second-section .details,
+    .second-section .illustration-2{
+        margin:0px auto;
+    }
+    .illustration-2{
+        width:700px;
+        height:400px;
+    }
+    .details h1,
+    .details p{
+        width:fit-content;
+        margin:10px auto;
+    }
+    .comment-box{
+        width:350px;
+        margin:30px auto;
+    }
+    .image{
+        display:flex;
+        align-items: center;
+        margin-top:20px;
+        margin-right:120px
+    }
+    .third-selection{
+        height:450px;
+        margin-top:-30px;
+    }
+    .sign-details, .second-form{
+        margin:60px auto;
+    }
+    .sign-details h2{
+        margin:20px auto;
+        width:fit-content
+    }
+    .email-starting button{
+        width:200px;
+        margin-left:75px
+    }
+}
+@media (max-width:620px){
+    .nav-bar{
+        height:35px;
+    }
+    .nav-bar .logo{
+        height:34px;
+        width:70px;
+    }
+    .nav-bar ul{
+        gap:1rem;
+    }
+    .nav-bar .nav-link{
+        font-size: var(--fs-pg-normal);
+        font-weight: var(--fw-headings-normal);
+        font-size: 0.7rem;
+    }
+    p{
+        font-size: 0.75rem;
+    }
+    .info{
+        margin-top:-50px;
+    }
+    h1{
+        font-size:1.15rem;
+        margin:auto;
+        text-align:center;
+        width: calc(100% - 110px)
+    }
+    .info-first{
+        margin:20px auto;
+        width:calc(100% - 10ch);
+    }
+    .email-address{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap:10px
+    }
+    .email-address input{
+        width:200px;
+        height:30px;
+    }
+    .email-address button{
+        width:180px;
+        height:30px;
+    }
+    .illustration-2{
+        width:100%;
+        height:100%;
+    }
+    .details h1{
+        margin-bottom: 30px;
+    }
+    .details .info-second{
+        margin:20px auto;
+        width:100%;
+    }
+    .comment-box{
+        width:calc(100% - 30px);
+
+    }
+    .sign-details h2{
+        margin-bottom:5px;
+        width:calc(100% - 5ch);
+        display: flex;
+        justify-content: center;
+    }
+    .sign-details p{
+        width:calc(100% - 10ch);
+        margin:auto;
+    }
+    .third-selection{
+        height:400px;
+    }
+    .email-starting{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap:10px
+    }
+    .email-starting input{
+        width:200px;
+        height:30px;
+        margin-top:-50px
+    }
+    .email-starting button{
+        width:140px;
+        height:30px;
+    }
+    .footer-bar .container{
+        display: block;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .box1-footer .logo{
+        margin-bottom: 10px;
+        width:80px;
+        height:60px;
+    }
+}
+@media (max-width:360px){
+    .container{
+        margin:10px;
+    }
+    body{
+        font-size:0.6rem;
+    }
+    input{
+        width:150px;
+        height:25px;
+    }
+    h1{
+        font-size:0.9rem;
+        width: calc(100% - 20px)
+    }
+}
